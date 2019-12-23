@@ -335,9 +335,10 @@ header .header-cases {
 
   header .header-cases {
     display: block;
+    background: #7fe5f0;
     font-family: Catamaran;
     font-size: 16px;
-    color: #513b41;
+    color: white;
     text-transform: uppercase;
     line-height: 38px;
     border: 1px solid #111;
