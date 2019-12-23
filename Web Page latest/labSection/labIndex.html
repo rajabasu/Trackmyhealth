@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/50431c9a29.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:600&display=swap" rel="stylesheet" />
+    <title>Careathome</title>
+    <link rel="stylesheet" href="labIndex.css" />
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="header-brand">Careathome</a>
+        <nav>
+            <ul>
+                <li><a class="anchor-links" href="showLab.html">View Labs</a></li>
+                <li><a class="anchor-links" href="about.html">About me</a></li>
+                <li><a class="anchor-links" href="#">Contact</a></li>
+            </ul>
+            <a href="" class="nav-link header-cases" data-toggle="modal" data-target="#sign-out">Login / SignUp</a>
+
+            <div class="modal fade" id="sign-out">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- <h4 class="modal-title">Login</h4> -->
+                            <div class="text-center">
+                                <a href="" class="nav-link" data-toggle="modal" data-target="#register">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Register
+                                    </button>
+                                </a>
+                            </div>
+
+                            <button type="button" class="close" data-dismiss="modal">
+                                &times;
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <!-- <h4 class="modal-title">Login</h4> -->
+                            <!-- Press logout to leave -->
+                            <div class="container-fluid">
+                                <h3 class="login-key">
+                                    <i class="fa fa-user mb-4" aria-hidden="true"></i> LOGIN
+                                </h3>
+                                <div class="login-inputs">
+                                    <label class="mb-2" for="emailid">Email Id</label>
+                                    <input id="uname" type="email" required class="input-group-text mb-4"
+                                        id="inputGroup-sizing-lg" />
+                                    <label class="mb-2" for="password">Password</label>
+                                    <input id="upass" type="password" class="input-group-text" id="inputGroup-sizing-lg"
+                                        required />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-dismiss="modal"
+                                onclick="return makeCors()">
+                                Login
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="register">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Register Here...</h4>
+                            <button type="button" class="close" data-dismiss="modal">
+                                &times;
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="text-center">
+                                <a href="#" class="tooltip-test text-decoration-none" title="Login Using Google">
+                                    <i class="fab fa-google text-danger mb-3"></i>
+                                </a>
+                            </div>
+                            <div class="text-center font-weight-bold">or</div>
+                            <div class="dropdown-divider"></div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Lab Name</span>
+                                </div>
+                                <input type="text" id="labName" class="form-control" aria-label="Sizing example input"
+                                    aria-describedby="inputGroup-sizing-default">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">User Name</span>
+                                </div>
+                                <input type="text" id="userName" class="form-control" aria-label="Sizing example input"
+                                    aria-describedby="inputGroup-sizing-default">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                                </div>
+                                <input type="email" id="labEmail" class="form-control" aria-label="Sizing example input"
+                                    aria-describedby="inputGroup-sizing-default">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+                                </div>
+                                <input type="password" id="labPassword" class="form-control"
+                                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Phone No.</span>
+                                </div>
+                                <input type="number" id="labPhone" class="form-control"
+                                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Address</span>
+                                </div>
+
+                                <input type="text" id="labAddress" class="form-control"
+                                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">City</span>
+                                </div>
+                                <input type="text" id="labCity" class="form-control" aria-label="Sizing example input"
+                                    aria-describedby="inputGroup-sizing-default">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">State</span>
+                                </div>
+                                <input type="text" id="labState" class="form-control" aria-label="Sizing example input"
+                                    aria-describedby="inputGroup-sizing-default">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Pin Code</span>
+                                </div>
+                                <input type="text" id="labPin" class="form-control" aria-label="Sizing example input"
+                                    aria-describedby="inputGroup-sizing-default">
+                            </div>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info" data-dismiss="modal"
+                                onclick="savingTheUserDetailsToDataBase()">
+                                Register
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="index-banner">
+            <div class="vertical-center">
+                <h2>Care At Home<br /></h2>
+                <div class="btn-book text-center">
+                    <button type="button" class="btn btn-danger book">
+                        Book A Test
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4 divi">
+                    <div class="pic">
+                        <img src="1.JPG" alt="" />
+                    </div>
+                    <h6>HAkka Noodles...</h6>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo
+                    dolores impedit, officiis aperiam suscipit ea totam mollitia modi
+                    reprehenderit ullam possimus minus, et est velit numquam non a porro
+                    distinctio natus. Illum consectetur suscipit beatae? Aspernatur ipsa
+                    unde optio repellat, a quaerat nobis natus aperiam sit explicabo
+                    possimus. Nobis libero laborum, quibusdam ab ullam numquam, dolor
+                    rem enim aspernatur deserunt, iusto corporis harum fugiat
+                    perferendis nulla at impedit dolores reiciendis in sit dolorum
+                    possimus! Accusantium molestias quae adipisci earum sit id doloribus
+                    eligendi, consequuntur consequatur itaque ut impedit minima nulla
+                    modi voluptatibus sint voluptatem aut, molestiae quibusdam,
+                    voluptatum perspiciatis dicta?
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 divi">
+                    <div class="pic">
+                        <img src="2.JPG" alt="" />
+                    </div>
+                    <h6>MOMOS...</h6>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
+                    accusamus assumenda dignissimos laborum sed alias, impedit quo, id
+                    quis minus, optio adipisci. Nobis blanditiis soluta, animi pariatur
+                    nesciunt excepturi velit quidem quasi unde, amet voluptate ipsam eum
+                    fugit impedit. Magni magnam eos unde illum quas autem praesentium
+                    officiis eum non, in at quia quisquam. Ut consectetur sequi,
+                    obcaecati molestias praesentium fugiat voluptatibus asperiores
+                    veritatis debitis reprehenderit expedita magnam? Ut quis repudiandae
+                    eius rem, sint nulla, illo quam architecto dignissimos blanditiis,
+                    sunt enim. Nobis recusandae autem quod tempore officiis nisi quaerat
+                    inventore, ipsam ratione quos, soluta ducimus vitae magnam ab
+                    obcaecati?
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 divi">
+                    <div class="pic">
+                        <img src="3.JPG" alt="" />
+                    </div>
+                    <h6>SCramBLed EGGS</h6>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+                    distinctio, id nostrum illum labore assumenda provident omnis magnam
+                    blanditiis ipsam. Id, quisquam sapiente! Totam doloribus voluptas
+                    esse quis? Fugiat odit id eum eius explicabo tempore mollitia
+                    voluptatem ipsam error deserunt recusandae quaerat, quasi nemo sit
+                    saepe laudantium modi laborum cupiditate quia quos optio quis illum
+                    quod! Rerum magnam necessitatibus, impedit ratione, consectetur
+                    sequi commodi possimus numquam porro cumque dicta odit soluta animi
+                    voluptas id optio! Iusto impedit, corporis quae non saepe fugiat
+                    consequuntur eveniet aliquid magni, accusamus explicabo, ad officia
+                    nesciunt autem. Debitis libero repudiandae ex illum, architecto
+                    dolore labore.
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <ul class="footer-links-main">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Cases</a></li>
+            <li><a href="showLab.html">View Labs</a></li>
+            <li><a href="#">About me</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="footer-links-cases">
+            <li>
+                <p>Latest cases</p>
+            </li>
+            <li><a href="#">Case 1</a></li>
+            <li><a href="#">Case 2</a></li>
+            <li><a href="#">Case 3</a></li>
+            <li><a href="#">Case 4</a></li>
+        </ul>
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-google-plus"></i></a>
+            <a href="#"><i class="fab fa-facebook-square"></i> </a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <script src="index.js"></script>
+    <script src="userLogin.js"></script>
+    <script src="labRegister.js"></script>
+</body>
+
+</html>

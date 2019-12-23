@@ -1,0 +1,45 @@
+.login-section{
+    margin: 2rem;
+}
+.full-body{
+    background: #43C6AC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: -5px 10px black;
+    border-radius: 10px;
+    margin: 4rem;
+}
+
+.login-inputs{
+    padding: 5rem;
+}
+.login-key{
+    text-align: center;
+    color: rgb(202, 5, 5);
+   border-bottom: 3px solid green;
+    height: 40px;
+    border-radius:10px ;
+}
+.btn ,.btn-success{
+    margin-top: 2rem;
+   
+}
+.register-button{
+    margin-top: 38%;
+    margin-bottom: auto;
+    margin:40% ;
+    
+}
+.login{
+    border-right: 2px solid black;
+}
+
+@media screen and (max-width:400px){
+    .register-button{
+        
+     display: none;
+        
+        
+    }
+}
+

@@ -1,0 +1,13 @@
+.btn-primary{
+    float: right;
+}
+.row{
+    background: whitesmoke;
+    border-top: 2px solid green;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: -5px 5px grey;
+}
+.details-section{
+    padding: 2rem;
+}

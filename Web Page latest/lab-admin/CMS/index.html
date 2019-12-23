@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <script src="https://kit.fontawesome.com/50431c9a29.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Admistrator</title>
+</head>
+
+<body onload="startTime()">
+  <!-- <div id="admin"></div> -->
+
+  <nav class="navbar navbar-expand-md navbar-light">
+    <button class="navbar-toggler ml-auto mb-2 bg-light" type="button" data-toggle="collapse" data-target="#myNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- sidebar -->
+          <div class="col-xl-2 col-lg-3 col-md-4 fixed-top sidebar">
+            <!--fixed-top-->
+            <a href="#"
+              class="navbar-brand text-white d-block mx-auto text-center py-3 mb-4 bottom-border">TRACK MY HEALTH</a>
+            <div class="bottom-border pb-3">
+              <img src="admin.png" width="50" />
+              <a href="#" class="text-white">Admin Name</a>
+            </div>
+            <ul class="navbar-nav flex-column mt-4">
+              <li class="nav-item">
+                <a href="#" class="nav-link text-light p-3 mb-2 sidebar-link"><i
+                    class="fas fa-home text-light fa-lg mr-3"></i>Dashboard</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link text-light p-3 mb-2 sidebar-link" data-toggle="collapse"
+                  data-target="#collapseExampleProfile" aria-expanded="false" aria-controls="collapseExample"><i
+                    class="fas fa-user text-light fa-lg mr-3"></i>Profile</a>
+
+                <div class="collapse" id="collapseExampleProfile">
+                  <ul class="list-group">
+                  
+
+                    <a href="" class="text-decoration-none">
+                      <li class="list-group-item"><i class="fa fa-pencil mr-3" aria-hidden="true"></i>Edit Profile</li>
+                    </a>
+                  </ul>
+
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link text-light p-3 mb-2 sidebar-link" data-toggle="collapse"
+                  data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i
+                    class="fas fa-vial text-light fa-lg mr-3"></i>Tests</a>
+
+                <div class="collapse" id="collapseExample">
+                  <ul class="list-group">
+                    <a href="addTest.html" class="text-decoration-none">
+                      <li class="list-group-item"><i class="fa fa-plus mr-4" aria-hidden="true"></i>Add</li>
+                    </a>
+                    <a href="updateTest.html" class="text-decoration-none">
+                      <li class="list-group-item"><i class="fa fa-pencil mr-3" aria-hidden="true"></i>Update</li>
+                    </a>
+                    <a href="deleteTest.html" class="text-decoration-none">
+                      <li class="list-group-item"><i class="fa fa-minus mr-4" aria-hidden="true"></i>Delete</li>
+                    </a>
+                  </ul>
+
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link text-light p-3 mb-2 sidebar-link"><i
+                    class="fas fa-users text-light fa-lg mr-3"></i>Phlebotomist</a>
+              </li>
+
+              <!-- <li class="nav-item">
+                  <a href="#" class="nav-link text-light p-3 mb-2 sidebar-link"
+                    ><i class="fas fa-chart-bar text-light fa-lg mr-3"></i
+                    >Chart</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-light p-3 mb-2 sidebar-link"
+                    ><i class="fas fa-wrench text-light fa-lg mr-3"></i
+                    >Setting</a
+                  >
+                </li> -->
+
+              <li class="nav-item">
+                <a href="#" class="nav-link text-light p-3 mb-2 sidebar-link"><i
+                    class="fas fa-file-alt text-light fa-lg mr-3"></i>Documentation</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- end of sidebar -->
+          <!-- top nav -->
+          <div class="col-xl-10 col-lg-9 col-md-8 fixed-top ml-auto bg-dark  py-2 top-navbar">
+            <div class="row align-items-center ">
+              <div class="col-md-4 text-light text-uppercase mb-0">
+                <h4>Dashboard</h4>
+              </div>
+              <div class="col-md-5">
+                <form>
+                  <div class="input-group">
+                    <input type="text" class="form-control search-input" placeholder="Search..." />
+                    <button type="button" class="btn btn -white search-button">
+                      <i class="fas fa-search text-danger"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-3">
+                <ul class="navbar-nav">
+                  <li class="nav-item icon-parent">
+                    <a href="" class="nav-link icon-bullet"><i class="fas fa-comments text-muted fa-lg"></i></a>
+                  </li>
+
+                  <li class="nav-item icon-parent">
+                    <a href="" class="nav-link icon-bullet"><i class="fas fa-bell text-muted fa-lg"></i></a>
+                  </li>
+
+                  <li class="nav-item ml-md-auto">
+                    <a href="" class="nav-link" data-toggle="modal" data-target="#sign-out">
+                      <!-- <i class="fas fa-sign-out-alt fa-lg text-danger"></i> -->Signout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- end of top nav -->
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- modal -->
+  <div class="modal fade" id="sign-out">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Want to leave?</h4>
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+        </div>
+        <div class="modal-body">
+          Press logout to leave
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">
+            Stay here
+          </button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of modal -->
+
+  <!-- cards -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+        <div class="row pt-md-5 mt-md-3 mb-5">
+          <div class="col-xl-3 col-sm-6 p-2">
+            <div class="card card-common">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <i class="fas fa-vial fa-3x text-warning"></i>
+                  <div class="text-right text-secondary">
+                    <h5>Labs</h5>
+                    <h3>100</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer text-secondary">
+                <i class="fas fa-sync mr-3"></i>
+                <span>Updated Now</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 p-2">
+            <div class="card card-common">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <i class="fas fa-vials fa-3x text-success"></i>
+                  <div class="text-right text-secondary">
+                    <h5>Tests</h5>
+                    <h3>200</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer text-secondary">
+                <i class="fas fa-sync mr-3"></i>
+                <span>Updated Now</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 p-2">
+            <div class="card card-common">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <i class="fas fa-users fa-3x text-info"></i>
+                  <div class="text-right text-secondary">
+                    <h5>Users</h5>
+                    <h3>500</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer text-secondary">
+                <i class="fas fa-sync mr-3"></i>
+                <span>Updated Now</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 p-2">
+            <div class="card card-common">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <i class="fas fa-chart-line fa-3x text-danger"></i>
+                  <div class="text-right text-secondary">
+                    <h5>Visitors</h5>
+                    <h3>2000</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer text-secondary">
+                <i class="fas fa-sync mr-3"></i>
+                <span>Updated Now</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of cards -->
+
+  <!-- tables -->
+  <section>
+    <div class="container-fluid">
+      <div class="row mb-5">
+        <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+          <div class="row align-items-center">
+            <div class="col-xl-6 col-12 mb-4 mb-xl-0">
+              <h3 class="text-muted text-center mb-3">Phlebotomist</h3>
+              <table class="table table-striped bg-light text-center">
+                <thead>
+                  <tr class="text-muted">
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Date of Joining</th>
+                    <th>Contact</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <th>PERSONsss</th>
+                    <th>Bangalore</th>
+                    <th>12/12/12</th>
+                    <th>987654321</th>
+                  </tr>
+                  <tr>
+                    <th>1</th>
+                    <th>PERSONsss</th>
+                    <th>Bangalore</th>
+                    <th>12/12/12</th>
+                    <th>987654321</th>
+                  </tr>
+                  <tr>
+                    <th>1</th>
+                    <th>PERSONsss</th>
+                    <th>Bangalore</th>
+                    <th>12/12/12</th>
+                    <th>987654321</th>
+                  </tr>
+                  <tr>
+                    <th>1</th>
+                    <th>PERSONsss</th>
+                    <th>Bangalore</th>
+                    <th>12/12/12</th>
+                    <th>987654321</th>
+                  </tr>
+                  <tr>
+                    <th>1</th>
+                    <th>PERSONsss</th>
+                    <th>Bangalore</th>
+                    <th>12/12/12</th>
+                    <th>987654321</th>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- pagination -->
+              <nav>
+                <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                    <a href="#" class="page-link py-2 px-3">
+                      <span>&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item active">
+                    <!--active for active page-->
+                    <a href="#" class="page-link py-2 px-3">
+                      <span>1</span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link py-2 px-3">
+                      <span>2</span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link py-2 px-3">
+                      <span>3</span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link py-2 px-3">
+                      <span>&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- end of pagination -->
+            </div>
+            <div class="col-xl-6 col-12">
+              <h3 class="text-muted text-center mb-3">Labs</h3>
+              <table class="table table-dark table-hover text-center">
+                <thead>
+                  <tr class="text-muted">
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Contact</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="text-muted">
+                    <th>1</th>
+                    <th>LABss</th>
+                    <th>Bangalore</th>
+                    <th>123456789</th>
+                    <th>
+                      <span class="badge badge-success w-80 py-2">Approved</span>
+                    </th>
+                  </tr>
+                  <tr class="text-muted">
+                    <th>1</th>
+                    <th>LABss</th>
+                    <th>Bangalore</th>
+                    <th>123456789</th>
+                    <th>
+                      <span class="badge badge-success w-80 py-2">Approved</span>
+                    </th>
+                  </tr>
+                  <tr class="text-muted">
+                    <th>1</th>
+                    <th>LABss</th>
+                    <th>Bangalore</th>
+                    <th>123456789</th>
+                    <th>
+                      <span class="badge badge-success w-80 py-2">Approved</span>
+                    </th>
+                  </tr>
+                  <tr class="text-muted">
+                    <th>1</th>
+                    <th>LABss</th>
+                    <th>Bangalore</th>
+                    <th>123456789</th>
+                    <th>
+                      <span class="badge badge-danger w-80 py-2">Pending</span>
+                    </th>
+                  </tr>
+                  <tr class="text-muted">
+                    <th>1</th>
+                    <th>LABss</th>
+                    <th>Bangalore</th>
+                    <th>123456789</th>
+                    <th>
+                      <span class="badge badge-success w-80 py-2">Approved</span>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- pagination -->
+              <nav>
+                <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                    <a href="#" class="page-link py-2 px-3">
+                      <span>Previous</span>
+                    </a>
+                  </li>
+                  <li class="page-item active">
+                    <!--active for active page-->
+                    <a href="#" class="page-link py-2 px-3">
+                      <span>1</span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link py-2 px-3">
+                      <span>2</span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link py-2 px-3">
+                      <span>3</span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link py-2 px-3">
+                      <span>Next</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- end of pagination -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of tables -->
+
+  <!-- progress / task list -->
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+          <div class="row mb-4 align-items-center">
+            <div class="col-xl-6 col-12 mb-4 mb-xl-0">
+              <div class="bg-dark text-white p-4 rounded">
+                <h4 class="mb-5">Labs Assign...</h4>
+                <h6 class="mb-3">Lab1</h6>
+                <div class="progress mb-4" style="height: 20px;">
+                  <div class="progress-bar progress-bar-striped font-weight-bold" style="width: 91%">
+                    91%
+                  </div>
+                </div>
+                <h6 class="mb-3">Lab2</h6>
+                <div class="progress mb-4" style="height: 20px;">
+                  <div class="progress-bar progress-bar-striped font-weight-bold bg-success" style="width: 80%">
+                    80%
+                  </div>
+                </div>
+                <h6 class="mb-3">Lab3</h6>
+                <div class="progress mb-4" style="height: 20px;">
+                  <div class="progress-bar progress-bar-striped font-weight-bold bg-info" style="width: 86%">
+                    86%
+                  </div>
+                </div>
+                <h6 class="mb-3">Lab4</h6>
+                <div class="progress mb-4" style="height: 20px;">
+                  <div class="progress-bar progress-bar-striped font-weight-bold bg-danger" style="width: 70%">
+                    70%
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 col-12">
+              <h4 class="text-muted p3 mb-3">Recent Booking:</h4>
+              <div class="container-fluid bg-white">
+                <div class="row py-3 mb-4 task-border align-items-center">
+                  <!-- <div class="col-1">
+                      <input type="checkbox" checked />
+                    </div> -->
+                  <div class="col-sm-12 col-8">
+                    Customer1 : Lorem ipsum dolor, sit amet consectetur
+                    adipisicing elit. Tempora, illo?
+                  </div>
+                  <!-- <div class="col-1">
+                      <a
+                        href="#"
+                        data-toggle="tooltip"
+                        title="edit"
+                        data-placement="top"
+                        ><i class="fas fa-edit fa-lg text-success mr-2"></i
+                      ></a>
+                    </div> -->
+                  <!-- <div class="col-1">
+                      <a
+                        href="#"
+                        data-toggle="tooltip"
+                        title="delete"
+                        data-placement="top"
+                        ><i class="fas fa-trash-alt fa-lg text-danger"></i
+                      ></a>
+                    </div> -->
+                </div>
+              </div>
+              <div class="container-fluid bg-white">
+                <div class="row py-3 mb-4 task-border align-items-center">
+                  <!-- <div class="col-1">
+                      <input type="checkbox" checked />
+                    </div> -->
+                  <div class="col-sm-12 col-8">
+                    Customer2 : Lorem ipsum dolor, sit amet consectetur
+                    adipisicing elit. Tempora, illo?
+                  </div>
+                  <!-- <div class="col-1">
+                      <a
+                        href="#"
+                        data-toggle="tooltip"
+                        title="edit"
+                        data-placement="top"
+                        ><i class="fas fa-edit fa-lg text-success mr-2"></i
+                      ></a>
+                    </div>
+                    <div class="col-1">
+                      <a
+                        href="#"
+                        data-toggle="tooltip"
+                        title="delete"
+                        data-placement="top"
+                        ><i class="fas fa-trash-alt fa-lg text-danger"></i
+                      ></a>
+                    </div> -->
+                </div>
+              </div>
+              <div class="container-fluid bg-white">
+                <div class="row py-3 mb-4 task-border align-items-center">
+                  <!-- <div class="col-1">
+                      <input type="checkbox" checked />
+                    </div> -->
+                  <div class="col-sm-12 col-8">
+                    Customer3 : Lorem ipsum dolor, sit amet consectetur
+                    adipisicing elit. Tempora, illo?
+                  </div>
+                  <!-- <div class="col-1">
+                      <a
+                        href="#"
+                        data-toggle="tooltip"<div class="col-1">
+                      <a
+                        href="#"
+                        data-toggle="tooltip"
+                        title="edit"
+                        data-placement="top"
+                        ><i class="fas fa-edit fa-lg text-success mr-2"></i
+                      ></a>
+                    </div>
+                    <div class="col-1">
+                      <a
+                        href="#"
+                        data-toggle="tooltip"
+                        title="delete"
+                        data-placement="top"
+                        ><i class="fas fa-trash-alt fa-lg text-danger"></i
+                      ></a>
+                    </div>
+                        ><i class="fas fa-edit fa-lg text-success mr-2"></i
+                      ></a>
+                    </div>
+                    <div class="col-1">
+                      <a
+                        href="#"
+                        data-toggle="tooltip"
+                        title="delete"
+                        data-placement="top"
+                        ><i class="fas fa-trash-alt fa-lg text-danger"></i
+                      ></a>
+                    </div> -->
+                </div>
+              </div>
+              <div class="container-fluid bg-white">
+                <div class="row py-3 mb-4 task-border align-items-center">
+                  <!-- <div class="col-1">
+                      <input type="checkbox" checked />
+                    </div> -->
+                  <div class="col-sm-12 col-8">
+                    Customer4 : Lorem ipsum dolor, sit amet consectetur
+                    adipisicing elit. Tempora, illo?
+                  </div>
+                  <!-- <div class="col-1">
+                      <a
+                        href="#"
+                        data-toggle="tooltip"
+                        title="edit"
+                        data-placement="top"
+                        ><i class="fas fa-edit fa-lg text-success mr-2"></i
+                      ></a>
+                    </div>
+                    <div class="col-1">
+                      <a
+                        href="#"
+                        data-toggle="tooltip"
+                        title="delete"
+                        data-placement="top"
+                        ><i class="fas fa-trash-alt fa-lg text-danger"></i
+                      ></a>
+                    </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of progress / task list -->
+
+  <!-- activities / quick post -->
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+          <div class="row align-items-center mb-5">
+            <div class="col-xl-7">
+              <h4 class="text-muted mb-4">Recent Customer Activity</h4>
+              <div id="accordion">
+                <div class="card">
+                  <div class="card-header">
+                    <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse"
+                      data-target="#collapseOne">
+                      <!--User profile image below-->
+                      <i class="fas fa-user mr-3 rounded" width="50">Customer1 posted a new comment</i>
+                    </button>
+                  </div>
+                  <div class="collapse" id="collapseOne" data-parent="#accordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing
+                      elit. Dolorem consectetur, quasi sed magnam architecto
+                      doloribus repellendus tempore vel quis molestiae
+                      expedita, aperiam sit, aspernatur reiciendis?
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse"
+                      data-target="#collapseTwo">
+                      <!--User profile image below-->
+                      <i class="fas fa-user mr-3 rounded" width="50">Customer2 posted a new comment</i>
+                    </button>
+                  </div>
+                  <div class="collapse" id="collapseTwo" data-parent="#accordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing
+                      elit. Dolorem consectetur, quasi sed magnam architecto
+                      doloribus repellendus tempore vel quis molestiae
+                      expedita, aperiam sit, aspernatur reiciendis?
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse"
+                      data-target="#collapseThree">
+                      <!--User profile image below-->
+                      <i class="fas fa-user mr-3 rounded" width="50">Customer3 posted a new comment</i>
+                    </button>
+                  </div>
+                  <div class="collapse" id="collapseThree" data-parent="#accordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing
+                      elit. Dolorem consectetur, quasi sed magnam architecto
+                      doloribus repellendus tempore vel quis molestiae
+                      expedita, aperiam sit, aspernatur reiciendis?
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse"
+                      data-target="#collapseFour">
+                      <!--User profile image below-->
+                      <i class="fas fa-user mr-3 rounded" width="50">Customer4 posted a new comment</i>
+                    </button>
+                  </div>
+                  <div class="collapse" id="collapseFour" data-parent="#accordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing
+                      elit. Dolorem consectetur, quasi sed magnam architecto
+                      doloribus repellendus tempore vel quis molestiae
+                      expedita, aperiam sit, aspernatur reiciendis?
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse"
+                      data-target="#collapseFive">
+                      <!--User profile image below-->
+                      <i class="fas fa-user mr-3 rounded" width="50">Customer5 posted a new comment</i>
+                    </button>
+                  </div>
+                  <div class="collapse" id="collapseFive" data-parent="#accordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing
+                      elit. Dolorem consectetur, quasi sed magnam architecto
+                      doloribus repellendus tempore vel quis molestiae
+                      expedita, aperiam sit, aspernatur reiciendis?
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse"
+                      data-target="#collapseSix">
+                      <!--User profile image below-->
+                      <i class="fas fa-user mr-3 rounded" width="50">Customer6 posted a new comment</i>
+                    </button>
+                  </div>
+                  <div class="collapse" id="collapseSix" data-parent="#accordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing
+                      elit. Dolorem consectetur, quasi sed magnam architecto
+                      doloribus repellendus tempore vel quis molestiae
+                      expedita, aperiam sit, aspernatur reiciendis?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-5 mt-5">
+              <div class="card rounded">
+                <div class="card-body">
+                  <!-- <h5 class="text-muted text-center mb-4">
+                      Quick Status Post
+                    </h5>
+                    <ul class="list-inline text-center py-3">
+                      <li class="list-inline-item mr-4">
+                        <a href="#">
+                          <i class="fas fa-pencil-alt text-success"></i>
+                          <span class="h6 text-muted">Status</span>
+                        </a>
+                      </li>
+                      <li class="list-inline-item mr-4">
+                        <a href="#">
+                          <i class="fas fa-camera text-info"></i>
+                          <span class="h6 text-muted">Photo</span>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#">
+                          <i class="fas fa-map-marker-alt text-primary"></i>
+                          <span class="h6 text-muted">Check-in</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <form>
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control py-2 mb-3"
+                          placeholder="Whats your status?"
+                        />
+                        <button
+                          type="button"
+                          class="btn btn-block text-uppercase font-weight-bold text-light bg-info py-2 mb-5"
+                        >
+                          Submit Post
+                        </button>
+                      </div>
+                    </form> -->
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="card bg-light">
+                        <i class="far fa-calendar-alt fa-8x text-warning d-block m-auto py-3">
+                          <!-- <h5 class="text-muted text-center mb-4">
+                              Quick Status Post
+                            </h5>
+                            <ul class="list-inline text-center py-3">
+                              <li class="list-inline-item mr-4">
+                                <a href="#">
+                                  <i class="fas fa-pencil-alt text-success"></i>
+                                  <span class="h6 text-muted">Status</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item mr-4">
+                                <a href="#">
+                                  <i class="fas fa-camera text-info"></i>
+                                  <span class="h6 text-muted">Photo</span>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a href="#">
+                                  <i class="fas fa-map-marker-alt text-primary"></i>
+                                  <span class="h6 text-muted">Check-in</span>
+                                </a>
+                              </li>
+                            </ul>
+                            <form>
+                              <div class="form-group">
+                                <input
+                                  type="text"
+                                  class="form-control py-2 mb-3"
+                                  placeholder="Whats your status?"
+                                />
+                                <button
+                                  type="button"
+                                  class="btn btn-block text-uppercase font-weight-bold text-light bg-info py-2 mb-5"
+                                >
+                                  Submit Post
+                                </button>
+                              </div>
+                            </form> -->
+                        </i>
+                        <div class="card-body">
+                          <p class="card-text text-center font-weight-bold text-uppercase">
+                            <span id="datetime"></span>
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="card bg-light">
+                        <i class="far fa-clock fa-8x text-danger d-block m-auto py-3"></i>
+                        <div class="card-body">
+                          <p class="card-text text-center font-weight-bold text-uppercase">
+                            <span id="time"></span>
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of activities / quick post -->
+
+  <!-- footer -->
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+          <div class="row border-top pt-3">
+            <div class="col-lg-6 text-center">
+              <ul class="list-inline">
+                <li class="list-inline-item mr-2">
+                  <a href="#" class="text-dark">Careathome</a>
+                </li>
+                <li class="list-inline-item mr-2">
+                  <a href="#" class="text-dark">About</a>
+                </li>
+                <li class="list-inline-item mr-2">
+                  <a href="#" class="text-dark">Support</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 text-center">
+              <p>
+                &copy; 2019 Copyright. Made With
+                <i class="fas fa-heart text-danger"></i> by
+                <span class="text-success">Careathome</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end of footer -->
+
+  <!-- BOOTstrap -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  <!-- end of bootstrap -->
+
+  <!-- date / time -->
+  <script>
+    var dt = new Date();
+    document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+  </script>
+
+  <script>
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById("time").innerHTML = h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+    }
+
+    function checkTime(i) {
+      if (i < 10) {
+        i = "0" + i;
+      } // add zero in front of numbers < 10
+      return i;
+    }
+  </script>
+  <!-- end of date / time -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>

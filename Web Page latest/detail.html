@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Personal Details</title>
+    <link rel="stylesheet" href="detailStyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="action_page.php">
+        <h1>Only available in Bangalore</h1>
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">First Name</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your name.."
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Last Name</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+            />
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="col-25">
+            <label for="country">Country</label>
+          </div>
+          <div class="col-75">
+            <select id="country" name="country">
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+          </div>
+        </div> -->
+
+        <div class="row">
+          <div class="col-25">
+            <label for="State">State</label>
+          </div>
+          <div class="col-75 state">
+            Karnataka
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="City">City</label>
+          </div>
+          <div class="col-75 city">
+            Bangalore
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="address">Present Address</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="firstline"
+              name="firstline"
+              placeholder="First Line..."
+              required
+            />
+            <input
+              type="text"
+              id="secondline"
+              name="secondline"
+              placeholder="Second Line..."
+            />
+            <input
+              type="text"
+              id="thirdline"
+              name="thirdline"
+              placeholder="Third Line..."
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="pin">Pin No.</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="number"
+              id="pin"
+              name="pin"
+              placeholder="Pin Number..."
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="mob">Mobile</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="number"
+              id="mnum"
+              name="mobnum"
+              placeholder="Mobile Number..."
+            />
+          </div>
+        </div>
+
+        <div class="row button">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function logout() {
+        window.localStorage.setItem("status", "true");
+        window.localStorage.clear();
+        window.location = "index.html";
+      }
+    </script>
+    <script src="detailScript.js"></script>
+  </body>
+</html>

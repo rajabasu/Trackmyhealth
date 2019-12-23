@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Test</title>
+
+    <script src="https://kit.fontawesome.com/50431c9a29.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="card mx-auto p-5 m-5 shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="card-title text-center">
+                    <h3 class="text-success">Add a New Test to Your Collection</h3>
+                </div>
+                <div class="text-center font-weight-bold text-danger my-3" id="no-value"></div>
+                <div class="card-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Test's Name</span>
+                        </div>
+                        <input type="text" id="testname" class="form-control" placeholder="Name of the Test"
+                            aria-label="Name of the Test" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Description</span>
+                        </div>
+                        <input type="text" id="description" class="form-control" placeholder="Describe the test"
+                            aria-label="Describe the test" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Cost</span>
+                        </div>
+                        <input type="text" id="cost" class="form-control" placeholder="Cost of the test"
+                            aria-label="Cost of the test" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Discount</span>
+                        </div>
+                        <input type="text" id="discount" class="form-control" placeholder="Discount price"
+                            aria-label="Discount price" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Phlebotomy Charges</span>
+                        </div>
+                        <input type="text" id="phelbotomycharge" class="form-control" placeholder="Phlebotomy Charges"
+                            aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Information</span>
+                        </div>
+                        <input type="text" id="information" class="form-control" placeholder="Pre-test Information"
+                            aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+
+                    <button type="button" onclick="return addTest()"
+                        class="btn btn-success p-2 float-right my-3">Success</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="addTest.js"></script>
+</body>
+
+</html>
