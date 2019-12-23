@@ -221,7 +221,7 @@ header nav ul li {
 header nav ul li a {
   font-family: Catamaran;
   font-size: 16px;
-  color: yellow;
+  color: #513b41;
   text-transform: uppercase;
 }
 
@@ -294,7 +294,8 @@ header .header-cases {
     display: block;
     font-family: Catamaran;
     font-size: 16px;
-    color: #513b41;
+    color: #111;
+
     text-transform: uppercase;
     line-height: 38px;
     border: 1px solid #111;
@@ -544,7 +545,7 @@ footer {
   width: calc(100%-80px);
   padding: 40px 40px;
   margin-top: 20px;
-  background-color: #0292b7;
+  background-color: #7fe5f0;
   overflow: hidden;
 }
 
@@ -562,7 +563,7 @@ footer ul li {
 footer ul li a {
   font-family: Catamaran;
   font-size: 24px;
-  color: #dee2ec;
+  color: #513b41;
   line-height: 40px;
 }
 
@@ -595,7 +596,7 @@ footer ul li a {
   footer ul li p {
     font-family: Catamaran;
     font-size: 24px;
-    color: #dee2ec;
+    color: #513b41;
     line-height: 40px;
     text-transform: uppercase;
   }
