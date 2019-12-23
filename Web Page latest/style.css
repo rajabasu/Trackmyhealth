@@ -192,7 +192,7 @@ header .header-brand {
   font-family: Catamaran;
   font-size: 20px;
   font-weight: 900;
-  color: red;
+  color: #f83839;
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -229,7 +229,7 @@ header .header-cases {
   display: block;
   font-family: Catamaran;
   font-size: 15px;
-  color: #111;
+  color: #513b41;
   text-transform: uppercase;
   text-align: center;
   line-height: 38px;
@@ -294,7 +294,7 @@ header .header-cases {
     display: block;
     font-family: Catamaran;
     font-size: 16px;
-    color: #111;
+    color: #513b41;
     text-transform: uppercase;
     line-height: 38px;
     border: 1px solid #111;
@@ -335,7 +335,7 @@ header .header-cases {
     display: block;
     font-family: Catamaran;
     font-size: 16px;
-    color: #111;
+    color: #513b41;
     text-transform: uppercase;
     line-height: 38px;
     border: 1px solid #111;
