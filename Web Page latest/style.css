@@ -573,13 +573,14 @@ footer ul li a {
 }
 
 .footer-social {
-  width: 200px;
-  float: right;
+  width: 50px;
+  display: block;
+  text-align: right;
 }
 
 .footer-social i {
   font-size: 30px;
-  width: 100%;
+  width: 50%;
   padding: 10px;
 }
 
