@@ -97,7 +97,7 @@ window.onload = function changeLoginValue() {
         <div class="dropdown">
           <div class="dropbtn">
             <div class="float-right">
-              <h5 class="text-info my-4">Hi, ${name}
+              <h5 class="text-info my-3">Hi, ${name}
               
               <!--<div class="dropdown dropleft">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -1,98 +1,156 @@
-function labOnTheBasisOfCity(){
+
+function bangloreCity(){
+   
+    
+    window.localStorage.setItem('city-name','bangalore');
+
+}
+
+function hyderabadCity(){
+    alert("inside hyderabad")
+    window.localStorage.setItem('city-name','hyderabad');
+}
+
+function mumbaiCity(){
+    window.localStorage.setItem('city-name','mumbai');
+}
+
+function delhiCity(){
+    window.localStorage.setItem('city-name','delhi');
+}
+
+function chennaiCity(){
+    window.localStorage.setItem('city-name','chennai');
+}
+// function labOnTheBasisOfCity(){
+//   let arr;
+//   var city=window.localStorage.getItem('city-name');
+//   var xhr = new XMLHttpRequest();
+//   xhr.open("GET","https://wwww.trackmyhealth.in:8443/api/getalllabsbycity/"+city,true);
+//   xhr.onload = function(){
+//     alert("hii");
+//     var data = JSON.parse(this.response);
+//     if(xhr.status >= 200 && xhr.status < 400){
+//       arr=data;
+//       console.log(arr);
+//       alert("hello");
+//     }
+//   }
+// }
+
+// function labOnTheBasisOfCity(){
+
     const app = document.getElementById("app");
-// const container = document.createElement('div')
-// container.setAttribute('class', 'container')
-let city= window.localStorage.getItem('city-name')
+  let arr;
+  let city= window.localStorage.getItem('city-name')
 let xhr = new XMLHttpRequest();
 xhr.open("GET", "https://www.trackmyhealth.in:8443/api/getalllabsbycity/"+ city, true);
 xhr.onload = function() {
+//   alert("hi inside the labs of banglore")
+
   var data = JSON.parse(this.response);
-console.log(xhr.responseText)
-  if (xhr.status >= 200 && xhr.status < 400) {
-    data.forEach(details => {
-      const card = document.createElement("div");
-      card.setAttribute(
-        "class",
-        "d-flex card m-3 shadow-lg p-3 bg-white rounded justify-content-around"
-      );
-      card.setAttribute("style", "width:25rem");
+  if (data.length == 0) {
+    appNew.innerHTML = `
 
-      const cardBody = document.createElement("div");
-      cardBody.setAttribute("class", "card-body");
-      //head of the card
-      const anchor = document.createElement("a");
-      anchor.setAttribute("href", "labsDetail.html");
-      anchor.setAttribute("id", details.id);
+<div class="row">
 
-      //function for getting tests with related lab id
-      anchor.setAttribute("onclick", "gettests(this.id)");
-      anchor.setAttribute("class", "text-decoration-none");
-      const title = document.createElement("h5");
-      title.setAttribute("class", " text-center border-bottom border-danger");
-      title.textContent = details.lab_name;
-      //address of the card
-      const addDiv = document.createElement("div");
-      const addressIcon = document.createElement("i");
-      addressIcon.setAttribute("class", "fa fa-address-book mr-4");
-      const address = document.createElement("span");
+<div class="col-sm-12 col-lg-3 col-md-3 float-left my-5">
+    <a href="showLab.html" class="text-decoration-none" ><button type="button" onclick = "showlab.html" class="btn btn-warning p-2">
+    <i class="fa fa-backward px-2" aria-hidden="true"></i>  
+      Go back</button></a>
+</div>
 
-      address.textContent = details.address;
-      //phone of the card
-      const phone = document.createElement("div");
-      const phoneIcon = document.createElement("i");
-      phoneIcon.setAttribute("class", "fa fa-phone-alt");
+<div class="col-sm-12 col-md-9 col-lg-9">
+<p><h3 class="text-center text-danger">Sorry No Test Is Available For This Lab<span class="text-warning">	&#128542;</span></h3>
+      <h6 class="text-center">Click Back button to goback to the labs page and check other labs for the test. </h6> 
+</p>
+</div>
 
-      const phoneNo = document.createElement("span");
-      phoneNo.setAttribute("class", "font-weight-bold p-4");
-      phoneNo.textContent = details.phone;
-      //email. of the card
-      const email = document.createElement("div");
-      const emailIcon = document.createElement("i");
-      emailIcon.setAttribute("class", "fa fa-envelope");
-      const emailId = document.createElement("span");
-      emailId.setAttribute("class", "font-italic p-4");
+</div>
+  
+  `;
+  }else{
 
-      if (details.email == "") {
-        emailId.textContent = "No emailId";
-      } else {
-        emailId.textContent = details.email;
-      }
-
-      app.appendChild(card);
-
-      card.appendChild(cardBody);
-      card.appendChild(anchor);
-      anchor.appendChild(title);
-
-      // card.appendChild(p)
-      card.appendChild(addDiv);
-      addDiv.appendChild(addressIcon);
-      addDiv.appendChild(address);
-      card.appendChild(phone);
-      phone.appendChild(phoneIcon);
-      phone.appendChild(phoneNo);
-      card.appendChild(email);
-      email.appendChild(emailIcon);
-      email.appendChild(emailId);
-    });
-  }
-};
+  
+//console.log(xhr.responseText);
+if (xhr.status >= 200 && xhr.status < 400) {
+  arr=data;
+      arr.forEach(details => {
+        const app = document.getElementById("app");
+        const card = document.createElement("div");
+        card.setAttribute(
+          "class",
+          "d-flex card m-3 shadow-lg p-3 bg-white rounded justify-content-around"
+        );
+        card.setAttribute("style", "width:25rem");
+  
+        const cardBody = document.createElement("div");
+        cardBody.setAttribute("class", "card-body");
+        //head of the card
+        const anchor = document.createElement("a");
+        anchor.setAttribute("href", "labsDetail.html");
+        anchor.setAttribute("id", details.id);
+  
+        //function for getting tests with related lab id
+        anchor.setAttribute("onclick", "gettests(this.id)");
+        anchor.setAttribute("class", "text-decoration-none");
+        const title = document.createElement("h5");
+        title.setAttribute("class", " text-center border-bottom border-danger");
+        title.textContent = details.lab_name;
+        //address of the card
+        const addDiv = document.createElement("div");
+        const addressIcon = document.createElement("i");
+        addressIcon.setAttribute("class", "fa fa-address-book mr-4");
+        const address = document.createElement("span");
+  
+        address.textContent = details.address;
+        //phone of the card
+        const phone = document.createElement("div");
+        const phoneIcon = document.createElement("i");
+        phoneIcon.setAttribute("class", "fa fa-phone-alt");
+  
+        const phoneNo = document.createElement("span");
+        phoneNo.setAttribute("class", "font-weight-bold p-4");
+        phoneNo.textContent = details.phone;
+        //email. of the card
+        const email = document.createElement("div");
+        const emailIcon = document.createElement("i");
+        emailIcon.setAttribute("class", "fa fa-envelope");
+        const emailId = document.createElement("span");
+        emailId.setAttribute("class", "font-italic p-4");
+  
+        if (details.email == "") {
+          emailId.textContent = "No emailId";
+        } else {
+          emailId.textContent = details.email;
+        }
+  
+        
+  
+        card.appendChild(cardBody);
+        card.appendChild(anchor);
+        anchor.appendChild(title);
+  
+        // card.appendChild(p)
+        card.appendChild(addDiv);
+        addDiv.appendChild(addressIcon);
+        addDiv.appendChild(address);
+        card.appendChild(phone);
+        phone.appendChild(phoneIcon);
+        phone.appendChild(phoneNo);
+        card.appendChild(email);
+        email.appendChild(emailIcon);
+        email.appendChild(emailId);
+        app.appendChild(card);
+      });
+    }
+}}
 xhr.send();
 
-function gettests(labId) {
-  console.log(labId);
-  window.localStorage.setItem("labId", labId);
-}
-}
 
 
 
-
-function bangloreCity(){
-    console.log("skjss 111");
-    window.localStorage.setItem('city-name','bangalore');
-labOnTheBasisOfCity();
-}
+// }
 
 
 window.onload = function changeLoginValue() {
@@ -116,7 +174,7 @@ window.onload = function changeLoginValue() {
           <div class="dropdown">
             <div class="dropbtn">
               <div class="float-right">
-                <h5 class="text-info">Hi, ${name}
+                <h5 class="text-info mt-4">Hi, ${name}
   
                 <!--<div class="dropdown dropleft">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
