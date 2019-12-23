@@ -183,7 +183,7 @@ body {
 }
 
 header {
-  background-color: greenyellow;
+  background-color: #7fe5f0;
   width: 100%;
   height: 150px;
 }
@@ -267,7 +267,7 @@ header .header-cases {
 
 @media only screen and (min-width: 1000px) {
   header {
-    background-color: green;
+    background-color: #7fe5f0;
     width: 100%;
     height: 100px;
   }
@@ -308,7 +308,7 @@ header .header-cases {
 
 @media only screen and (min-width: 1500px) {
   header {
-    background-color: whitesmoke;
+    background-color: #7fe5f0;
     width: 100%;
     height: 100px;
   }
