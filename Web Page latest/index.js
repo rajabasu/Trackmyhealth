@@ -83,7 +83,7 @@ window.onload = function changeLoginValue() {
     let name = window.localStorage.getItem("name");
     showname.innerHTML = `
     <header>
-      <a href="index.html" class="header-brand text-decoration-none">TRACKMYHEALTH</a>
+      <a href="index.html" class="header-brand text-decoration-none ">TrackMyHealth</a>
       <nav>
         <ul>
           <li><a href="showLab.html" class="text-decoration-none">View Labs</a></li>
