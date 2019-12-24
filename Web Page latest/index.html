@@ -201,10 +201,12 @@
               type="button"
               class="btn btn-primary btn-lg dropdown-toggle "
               data-toggle="dropdown"
+              onclick=""
             >
               Select City
             </button>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu" >
+              <div  id="cities"></div>
               <a
                 href="bengaluru.html"
                 class=" text-decoration-none"
@@ -233,7 +235,7 @@
       </section>
       <script>
       function bangloreCity(){
-        window.localStorage.setItem('city-name', 'bangalore')
+        window.localStorage.setItem('city-name', 'bengaluru')
       }
       function hyderabadCity(){
         window.localStorage.setItem('city-name','hyderabad')
@@ -248,7 +250,40 @@
        function chennaiCity(){
          window.localStorage.setItem('city-name', 'chennai')
        }
+
+
+
       </script>
+      <!-- <script>
+        function getCities(){
+        
+          let xhr = new XMLHttpRequest();
+          xhr.open("GET", "https://www.trackmyhealth.in:8443/api/getallcities", true);
+          xhr.onload = function() {
+            var data = JSON.parse(xhr.responseText);
+            console.log(xhr.responseText);
+            console.log(data);
+           
+            data.forEach(info => {
+              console.log(info.city);
+              document.getElementById('cities').innerHTML = `
+              <a
+                href="bengaluru.html"
+                class=" text-decoration-none"
+                onclick="bangloreCity()"
+                ><h4 class="text-center py-1">${info.city}</h4></a
+              >
+              <div class="dropdown-divider"></div>
+              `
+            });
+            
+            
+            
+          }
+          xhr.send()
+        }
+      
+      </script> -->
 
       <div class="container-fluid">
         <div class="row">
@@ -422,8 +457,12 @@
 
     <script src="index.js"></script>
     <script src="userLogin.js"></script>
-    <script src="showLab.js"></script>
+    <!-- <script src="showLab.js"></script> -->
     <script src="google-analytics.js"></script>
+    <script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=UA-154874757-1"
+></script>;
 
     <!-- <script src="/Web Page latest/js/city-basis.js"></script> -->
   </body>
