@@ -184,13 +184,12 @@ body {
 
 header {
   background-color: #7fe5f0;
-
   width: 100%;
   height: 150px;
 }
 
 header .header-brand {
-  font-family: Catamaran;
+  font-family: "Abril Fatface", cursive;
   font-size: 20px;
   font-weight: 900;
   color: #f83839;
@@ -211,7 +210,7 @@ header nav ul li {
   display: inline-block;
   /* float: left; */
   list-style: none;
-  padding: 0 16px;
+  padding: 0 12px;
   text-decoration: none;
 }
 
@@ -220,7 +219,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-  font-family: Catamaran;
+  font-family: "Libre Baskerville", serif;
   font-size: 16px;
   color: #513b41;
   text-transform: uppercase;
@@ -228,14 +227,14 @@ header nav ul li a {
 
 header .header-cases {
   display: block;
-  font-family: Catamaran;
+  font-family: "Libre Baskerville", serif;
   font-size: 15px;
   color: #513b41;
   text-transform: uppercase;
   text-align: center;
   line-height: 38px;
   border: 1px solid #111;
-  width: 160px;
+  width: 12rem;
   margin-right: auto;
   margin-left: auto;
   padding: 0 20px;
@@ -293,15 +292,15 @@ header .header-cases {
 
   header .header-cases {
     display: block;
-    font-family: Catamaran;
-    font-size: 16px;
+    font-family: "Libre Baskerville", serif;
+    font-size: 15px;
     color: #111;
 
     text-transform: uppercase;
     line-height: 38px;
     border: 1px solid #111;
     float: right;
-    width: 160px;
+    width: 12rem;
     margin-right: 40px;
     margin-top: 40px;
     padding: 0 20px;
@@ -336,14 +335,14 @@ header .header-cases {
   header .header-cases {
     display: block;
     background: #7fe5f0;
-    font-family: Catamaran;
-    font-size: 16px;
+    font-family: "Libre Baskerville", serif;
+    font-size: 15px;
     color: white;
     text-transform: uppercase;
     line-height: 38px;
     border: 1px solid #111;
     float: right;
-    width: 160px;
+    width: 12rem;
     margin-right: 40px;
     margin-top: 40px;
     padding: 0 20px;
@@ -378,16 +377,16 @@ header .header-cases {
   text-shadow: 2px 2px 8px #111;
 }
 
-.index-banner h1 {
+/* .index-banner h1 {
   font-family: Catamaran;
-  font-size: 28px;
+  font-size: 2px;
   font-weight: 100;
   font-style: italic;
   line-height: 40px;
   color: #fff;
   text-align: center;
   text-shadow: 2px 2px 8px #111;
-}
+} */
 
 /* .index-links div {
   margin: 16px 16px 0;
@@ -423,12 +422,12 @@ header .header-cases {
   .index-banner {
     height: 450px;
   }
-
+  /* 
   .index-banner h1 {
     display: block;
     width: 600px;
     margin: 0 auto;
-  }
+  } */
 
   .index-links {
     overflow: hidden;
@@ -544,32 +543,32 @@ q {
 /* ****************************************************** */
 
 footer {
-  width: calc(100%-80px);
+  width: calc(100%-80rem);
   padding: 40px 40px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   background-color: #7fe5f0;
   overflow: hidden;
 }
 
-footer ul {
+/* footer ul {
   width: fit-content;
   float: left;
   padding-left: 20px;
-}
+} */
 
 footer ul li {
   display: block;
   list-style: none;
 }
 
-footer ul li a {
+/* footer ul li a {
   font-family: Catamaran;
   font-size: 24px;
   color: #513b41;
   line-height: 40px;
-}
+} */
 
-.footer-links-cases {
+/* .footer-links-cases {
   display: none;
 }
 
@@ -583,27 +582,19 @@ footer ul li a {
   font-size: 30px;
   width: 50%;
   padding: 10px;
-}
+} */
 
 /* ****************************************************************** */
 
-@media only screen and (min-width: 1000px) {
-  .footer-links-cases {
-    display: block;
+@media only screen and (min-width: 768px) {
+  .foot-fix {
+    padding: 40px 40px;
+    /* margin-top: 20px; */
+    background-color: #7fe5f0;
+    overflow: hidden;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
   }
-
-  footer ul {
-    padding-right: 30px;
-  }
-
-  footer ul li p {
-    font-family: Catamaran;
-    font-size: 24px;
-    color: #513b41;
-    line-height: 40px;
-    text-transform: uppercase;
-  }
-}
-li.selected a {
-  color: #0db159;
 }
