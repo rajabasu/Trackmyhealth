@@ -177,6 +177,7 @@ select {
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 .app-title {
@@ -333,7 +334,6 @@ a.labLink {
 i:hover {
   /* Start the shake animation and make the animation last for 0.5 seconds */
   animation: shake 0.5s;
-
 
   /* When the animation is finished, start again */
   animation-iteration-count: 1;

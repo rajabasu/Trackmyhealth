@@ -368,18 +368,18 @@ window.onload = function changeLoginValue() {
   } else {
     document.getElementById("body").innerHTML = `
     <header id="loginandsignup">
-      <a href="index.html" class="header-brand">TRACKMYHEALTH</a>
+      <a href="index.html" class="header-brand text-decoration-none">TRACKMYHEALTH</a>
       <nav>
         <ul>
-          <li><a class="anchor-links" href="showLab.html">View Labs</a></li>
-          <li><a class="anchor-links" href="about.html">About Us</a></li>
-          <li><a class="anchor-links" href="#">Contact</a></li>
+          <li><a class="anchor-links text-decoration-none" href="showLab.html">View Labs</a></li>
+          <li><a class="anchor-links text-decoration-none" href="about.html">About Us</a></li>
+          <li><a class="anchor-links text-decoration-none" href="#">Contact</a></li>
         </ul>
 
         <a
           href=""
           id=""
-          class="nav-link header-cases"
+          class="nav-link header-cases text-decoration-none"
           data-toggle="modal"
           data-target="#sign-out"
           >Login / SignUp</a
@@ -393,9 +393,9 @@ window.onload = function changeLoginValue() {
                 <div class="text-center">
                   <a
                     href=""
-                    class="nav-link"
+                    class="nav-link text-decoration-none"
                     data-toggle="modal"
-                    data-target="#register"
+                    data-target="#register" 
                   >
                     <button
                       type="button"
