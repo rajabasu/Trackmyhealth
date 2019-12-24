@@ -93,7 +93,7 @@ if (status == "false") {
 let name = window.localStorage.getItem("name");
 document.getElementById("body").innerHTML = `
 <header>
-      <a href="index.html" class="header-brand text-decoration-none">TRACKMYHEALTH</a>
+      <a href="index.html" class="header-brand text-decoration-none">TrackMyHealth</a>
       <nav>
         <ul>
           <li><a href="showLab.html" class="text-decoration-none">View Labs</a></li>

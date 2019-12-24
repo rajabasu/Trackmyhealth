@@ -1,56 +1,55 @@
-
 function savingTheUserDetailsToDataBase() {
-    let userName = document.getElementById("username").value;
-    let emailId = document.getElementById("emailId").value;
-    let phoneNumber = document.getElementById("phoneNumber").value;
-    let password1 = document.getElementById("password1").value;
-    let password2 = document.getElementById("password2").value;
-  
-    if (
-      userName == "" ||
-      emailId == "" ||
-      phoneNumber == "" ||
-      password1 == "" ||
-      password2 == ""
-    ) {
-      alert("Enter credentials...");
-    } else if (password1 == password2) {
-      let body = {
-        username: userName,
-        email: emailId,
-        phone: phoneNumber,
-        password: password1
-      };
-  
-      var xhr = new XMLHttpRequest();
-  
-      method = "PUT";
-      var url =
-        "https://www.trackmyhealth.in:8443/api/put/searchAndCreateUserByEmail";
-      xhr.open(method, url, true);
-      xhr.setRequestHeader("Content-Type", "application/json");
-      xhr.send(JSON.stringify(body));
-      alert("successful registration");
-  
-      window.localStorage.clear();
-      window.localStorage.setItem("name", userName);
-      window.location = "showLab.html";
-    } else {
-      alert("wrong password");
-    }
+  let userName = document.getElementById("username").value;
+  let emailId = document.getElementById("emailId").value;
+  let phoneNumber = document.getElementById("phoneNumber").value;
+  let password1 = document.getElementById("password1").value;
+  let password2 = document.getElementById("password2").value;
+
+  if (
+    userName == "" ||
+    emailId == "" ||
+    phoneNumber == "" ||
+    password1 == "" ||
+    password2 == ""
+  ) {
+    alert("Enter credentials...");
+  } else if (password1 == password2) {
+    let body = {
+      username: userName,
+      email: emailId,
+      phone: phoneNumber,
+      password: password1
+    };
+
+    var xhr = new XMLHttpRequest();
+
+    method = "PUT";
+    var url =
+      "https://www.trackmyhealth.in:8443/api/put/searchAndCreateUserByEmail";
+    xhr.open(method, url, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(JSON.stringify(body));
+    alert("successful registration");
+
+    window.localStorage.clear();
+    window.localStorage.setItem("name", userName);
+    window.location = "showLab.html";
+  } else {
+    alert("wrong password");
   }
-  
-  //change login view with login status
-  window.onload = function changeLoginValue() {
-    let status = window.localStorage.getItem("status");
-  
-    if (status == "false") {
-      document.getElementById("loginandsignup").style.display = "none";
-      let showname = document.getElementById("showname");
-      let name = window.localStorage.getItem("name");
-      showname.innerHTML = `
+}
+
+//change login view with login status
+window.onload = function changeLoginValue() {
+  let status = window.localStorage.getItem("status");
+
+  if (status == "false") {
+    document.getElementById("loginandsignup").style.display = "none";
+    let showname = document.getElementById("showname");
+    let name = window.localStorage.getItem("name");
+    showname.innerHTML = `
       <header>
-        <a href="index.html" class="header-brand text-decoration-none">TRACKMYHEALTH</a>
+        <a href="index.html" class="header-brand text-decoration-none">TrackMyHealth</a>
         <nav>
           <ul>
             <li><a href="showLab.html" class="text-decoration-none">View Labs</a></li>
@@ -248,6 +247,5 @@ function savingTheUserDetailsToDataBase() {
         </nav>
       </header>
       `;
-    }
-  };
-  
+  }
+};

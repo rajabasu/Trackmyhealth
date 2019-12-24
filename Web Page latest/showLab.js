@@ -177,7 +177,7 @@ window.onload = function changeLoginValue() {
     let name = window.localStorage.getItem("name");
     showname.innerHTML = `
     <header>
-      <a href="index.html" class="header-brand text-decoration-none">TRACKMYHEALTH</a>
+      <a href="index.html" class="header-brand text-decoration-none">TrackMyHealth</a>
       <nav>
         <ul>
           <li><a href="showLab.html" class="text-decoration-none">View Labs</a></li>
@@ -368,7 +368,7 @@ window.onload = function changeLoginValue() {
   } else {
     document.getElementById("body").innerHTML = `
     <header id="loginandsignup">
-      <a href="index.html" class="header-brand text-decoration-none">TRACKMYHEALTH</a>
+      <a href="index.html" class="header-brand text-decoration-none">TrackMyHealth</a>
       <nav>
         <ul>
           <li><a class="anchor-links text-decoration-none" href="showLab.html">View Labs</a></li>
@@ -527,7 +527,7 @@ window.onload = function changeLoginValue() {
 //nav bar
 document.getElementById("body").innerHTML = `
 <header>
-  <a href="index.html" class="header-brand text-decoration-none">TRACKMYHEALTH</a>
+  <a href="index.html" class="header-brand text-decoration-none">TrackMyHealth</a>
   <nav>
     <ul>
       <li><a href="showLab.html" class="text-decoration-none">View Labs</a></li>

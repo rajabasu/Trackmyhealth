@@ -45,18 +45,18 @@ let name = window.localStorage.getItem("name");
 
 const app = document.getElementById("app");
 const appNew = document.getElementById("appNew");
-let labId = window.localStorage.getItem("id")
+let labId = window.localStorage.getItem("id");
 let lab = 1;
 let xhr = new XMLHttpRequest();
 xhr.open(
-    "GET",
-    "https://www.vnritsolutions.com:8443/api/getalltestsbylab/" + lab,
-    true
+  "GET",
+  "https://www.vnritsolutions.com:8443/api/getalltestsbylab/" + lab,
+  true
 );
-xhr.onload = function () {
-    var data = JSON.parse(this.response);
-    if (data.length == 0) {
-        appNew.innerHTML = `
+xhr.onload = function() {
+  var data = JSON.parse(this.response);
+  if (data.length == 0) {
+    appNew.innerHTML = `
 
 <div class="row">
 
@@ -73,31 +73,31 @@ xhr.onload = function () {
 
 </div>
     
-    `
-    }
-    if (xhr.status >= 200 && xhr.status < 400) {
-        data.forEach(details => {
-            const card1 = document.createElement("div");
-            card1.setAttribute(
-                "class",
-                " col-md-4 m-2  shadow-lg p-3 bg-white rounded "
-            );
-            // card.setAttribute("style", "width:25rem");
+    `;
+  }
+  if (xhr.status >= 200 && xhr.status < 400) {
+    data.forEach(details => {
+      const card1 = document.createElement("div");
+      card1.setAttribute(
+        "class",
+        " col-md-4 m-2  shadow-lg p-3 bg-white rounded "
+      );
+      // card.setAttribute("style", "width:25rem");
 
-            const cardBody = document.createElement("div");
-            cardBody.setAttribute("class", "card-body");
+      const cardBody = document.createElement("div");
+      cardBody.setAttribute("class", "card-body");
 
-            const anchor = document.createElement("a");
-            anchor.setAttribute("href", "labDetails.html");
-            anchor.setAttribute("class", "text-decoration-none");
-            const title = document.createElement("h5");
-            title.setAttribute("class", " text-center border-bottom border-danger");
-            title.textContent = details.test_name;
+      const anchor = document.createElement("a");
+      anchor.setAttribute("href", "labDetails.html");
+      anchor.setAttribute("class", "text-decoration-none");
+      const title = document.createElement("h5");
+      title.setAttribute("class", " text-center border-bottom border-danger");
+      title.textContent = details.test_name;
 
-            const desDiv = document.createElement("div");
-            desDiv.setAttribute("class", "text-justify");
-            const description = document.createElement("span");
-            description.innerHTML = `<span class="font-weight-bold">Description : </span>${
+      const desDiv = document.createElement("div");
+      desDiv.setAttribute("class", "text-justify");
+      const description = document.createElement("span");
+      description.innerHTML = `<span class="font-weight-bold">Description : </span>${
         details.description
       }
       <p><span class="font-weight-bold">Cost : </span>&#x20B9 <del>${
@@ -111,19 +111,19 @@ xhr.onload = function () {
         <!-- <div class="text-right"><button type="button" class="btn btn-primary text-center ">Add to cart</button></div>-->
       `;
 
-            //   const costDiv = document.createElement("div");
-            //   costDiv.setAttribute("class", "text-justify");
-            //   const cost = document.createElement("span");
-            //   cost.innerHTML = `<span class="font-weight-bold">Cost : &#x20B9</span>${details.cost}`;
+      //   const costDiv = document.createElement("div");
+      //   costDiv.setAttribute("class", "text-justify");
+      //   const cost = document.createElement("span");
+      //   cost.innerHTML = `<span class="font-weight-bold">Cost : &#x20B9</span>${details.cost}`;
 
-            app.appendChild(card1);
-            card1.appendChild(cardBody);
-            card1.appendChild(title);
+      app.appendChild(card1);
+      card1.appendChild(cardBody);
+      card1.appendChild(title);
 
-            card1.appendChild(desDiv);
-            desDiv.appendChild(description);
-        });
-    }
+      card1.appendChild(desDiv);
+      desDiv.appendChild(description);
+    });
+  }
 };
 
 xhr.send();
@@ -168,15 +168,13 @@ xhr.send();
 //  <div>
 //  <a href="userRegiter.html" class="header-cases" ><i class="fa fa-user-plus mr-2" aria-hidden="true"></i>Regiter</a></div>
 
-
-
 // </nav>
 // </header>
 // `;
 
 document.getElementById("body").innerHTML = `
 <header>
-  <a href="index.html" class="header-brand">Careathome</a>
+  <a href="index.html" class="header-brand">TrackMyHealth</a>
   <nav>
     <ul>
       <li><a href="showLab.html">View Labs</a></li>
