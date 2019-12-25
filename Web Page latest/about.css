@@ -16,7 +16,7 @@ header .header-brand {
   font-family: Catamaran;
   font-size: 20px;
   font-weight: 900;
-  color: #111;
+  color: #f83839;
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -36,6 +36,7 @@ header nav ul li {
   list-style: none;
   padding: 0 16px;
   text-decoration: none;
+  font-family: "Libre Baskerville", serif;
 }
 
 .anchor-links {

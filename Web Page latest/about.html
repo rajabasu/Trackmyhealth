@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Catamaran:600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="about.css" />
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="about.css" /> -->
   <link rel="stylesheet" href="style.css">
   <title>About</title>
 </head>
@@ -24,9 +26,9 @@
       <a href="index.html" class="header-brand">TrackMyHealth</a>
       <nav>
         <ul>
-          <li><a class="anchor-links text-decoration-none" href="showLab.html">View Labs</a></li>
-          <li><a class="anchor-links text-decoration-none" href="">About Us</a></li>
-          <li><a class="anchor-links text-decoration-none" href="contact.html">Contact</a></li>
+          <li><a class="anchor-links text-decoration-none" style="font-family: 'Libre Baskerville', serif;" href="showLab.html">View Labs</a></li>
+          <li><a class="anchor-links text-decoration-none" style="font-family: 'Libre Baskerville', serif;" href="">About Us</a></li>
+          <li><a class="anchor-links text-decoration-none" style="font-family: 'Libre Baskerville', serif;" href="contact.html">Contact</a></li>
         </ul>
         <a href="" class="nav-link header-cases" data-toggle="modal" data-target="#sign-out">Login / SignUp</a>
 
@@ -116,12 +118,16 @@
               <h1 class="py-3 fa-lg">
                 About Us
               </h1>
-              We want healthcare to be simple, handy and you have complete control of your health by visualising data, get suggestion, recommendation. Finally our goal is be preventive than reactive.
+              <div class="text-justify">
+                We want healthcare to be simple, handy and you have complete control of your health by visualising data, get suggestion, recommendation. Finally our goal is be preventive than reactive.
+              </div>
+              
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6 py-3">
               <h1 class="py-3 fa-lg">
                 Our Mission
               </h1>
+              
               Predictive, preventive and provide all your health information anytime and anywhere on the go.
 
             </div>
@@ -142,7 +148,58 @@
     </div>
     </div>
   </main>
-  <footer class="fixed-bottom">
+
+<!-- footer -->
+  <footer class="foot-fix">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="" >
+          <a href="index.html" class="text-decoration-none text-danger"><h1 class="" style="font-size: 40px; font-family: 'Abril Fatface', cursive; color:  #f83839;">TrackMyHealth</h1></a>         
+        </div>
+      </div>
+    </div>
+    <div class="container mt-3">
+      <div class="row justify-content-center">
+        <ul class="list-group list-group-horizontal">
+          <a href="about.html" class="text-decoration-none"><li class="px-5 font-weight-bold" style="color: black;">About Us</li></a>
+          <a href="showLab.html" class="text-decoration-none"><li class="px-5 font-weight-bold" style="color: black;">View Labs</li></a>
+          <a href="contact.html" class="text-decoration-none"><li class="px-5 font-weight-bold" style="color: black;">Contact</li></a>
+        </ul> 
+      </div>
+    </div>
+    <div class="dropdown-divider bg-dark my-3 " style="border-color: black;"></div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <h3 class="mt-1 mr-3">Connect With Us</h3> 
+        <i class="fab fa-twitter-square mr-4" style="font-size: 22px; color: #00acee ;"></i>
+        <i class="fab fa-google-plus mr-4" style="font-size: 22px; color: #db4a39;"></i>
+        <i class="fab fa-facebook-square " style="font-size: 22px; color: #3b5998;"></i>
+      </div>  
+    </div>
+    <div class="container-fluid mt-3">
+      <div class="row justify-content-around">
+        <ul class="list-inline ">
+          <a href="#" class="list-inline-item text-decoration-none my-2"><li class="px-5 text-muted text-center" style="color: black;">Privacy Policy</li></a>
+          <a href="#" class="list-inline-item text-decoration-none my-2"><li class="px-5 text-muted text-center" style="color: black;">Terms & Conditions</li></a>
+          <a href="#" class="list-inline-item text-decoration-none my-2"><li class="px-5 text-muted text-center" style="color: black;">Team</li></a>         
+        </ul> 
+      </div>
+    </div>
+    <div class="container mt-3">
+      <div class="row justify-content-center">
+        <p class="text-muted">
+          &copy; 2020 Copyright. Made With
+          <i class="fas fa-heartbeat text-danger"></i></i> by
+          <span ><a href="index.html" class="text-success text-decoration-none">TrackMyHealth</a></span>
+        </p>
+      </div>     
+    </div>
+  </footer>
+<!-- end of footer -->
+
+  
+
+  <!-- <footer class="fixed-bottom">
     <ul class="footer-links-main">
       <li><a href="index.html" class="text-decoration-none">Home</a></li>
       <li><a href="#" class="text-decoration-none">Cases</a></li>
@@ -163,7 +220,7 @@
       <a href="#" class="text-decoration-none"><i class="fab fa-google-plus"></i></a>
       <a href="#" class="text-decoration-none"><i class="fab fa-facebook-square"></i> </a>
     </div>
-  </footer>
+  </footer> -->
 
   <!-- bootstrap -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
@@ -175,10 +232,10 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
 
-  <script src="index.js"></script>
+  
   <script src="userLogin.js"></script>
   <script src="google-analytics.js"></script>
   <script src="about.js"></script>
-  "</body>
+  </body>
 
 </html>
