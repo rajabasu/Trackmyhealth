@@ -89,6 +89,8 @@ window.onload = function changeLoginValue() {
           <li><a href="showLab.html" class="text-decoration-none">View Labs</a></li>
           <li><a href="about.html"  class="text-decoration-none">About Us</a></li>
           <li><a href="contact.html"  class="text-decoration-none">Contact</a></li>
+         
+          
         </ul>
         
         <div>

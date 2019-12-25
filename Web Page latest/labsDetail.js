@@ -51,7 +51,7 @@ if (status == "false") {
         anchor.setAttribute("href", "labDetails.html");
         anchor.setAttribute("class", "text-decoration-none");
         const title = document.createElement("h5");
-        title.setAttribute("class", " text-center border-bottom border-danger");
+        title.setAttribute("class", " text-center text-primary border-bottom border-danger");
         title.textContent = details.test_name;
 
         const desDiv = document.createElement("div");
