@@ -101,7 +101,7 @@ xhr.onload = function() {
         "class",
         "d-flex card m-3 shadow-lg p-3 bg-white rounded justify-content-around"
       );
-       card.setAttribute("style", 'width:25rem');
+      card.setAttribute("style", "width:25rem");
 
       const cardBody = document.createElement("div");
       cardBody.setAttribute("class", "card-body");
@@ -114,23 +114,26 @@ xhr.onload = function() {
       anchor.setAttribute("onclick", "gettests(this.id)");
       anchor.setAttribute("class", "text-decoration-none");
       const title = document.createElement("h5");
-      title.setAttribute("class", " text-center border-bottom border-danger mt-1 lab-title");
+      title.setAttribute(
+        "class",
+        " text-center border-bottom border-danger mt-1 lab-title"
+      );
       title.textContent = details.lab_name;
       //address of the card
       const addDiv = document.createElement("div");
-      addDiv.setAttribute("class",'mt-5')
+      addDiv.setAttribute("class", "mt-5");
       const addressIcon = document.createElement("i");
       addressIcon.setAttribute("class", "fa fa-address-book mr-4");
-      addressIcon.setAttribute("style", 'font-size:12px')
+      addressIcon.setAttribute("style", "font-size:12px");
       const address = document.createElement("span");
-      address.setAttribute("class",'mb-3')
+      address.setAttribute("class", "mb-3");
       address.textContent = details.address;
-      
+
       //phone of the card
       const phone = document.createElement("div");
       const phoneIcon = document.createElement("i");
       phoneIcon.setAttribute("class", "fa fa-phone-alt");
-      phoneIcon.setAttribute("style", 'font-size:12px')
+      phoneIcon.setAttribute("style", "font-size:12px");
 
       const phoneNo = document.createElement("span");
       phoneNo.setAttribute("class", "font-weight-bold p-3");
@@ -139,10 +142,10 @@ xhr.onload = function() {
       const email = document.createElement("div");
       const emailIcon = document.createElement("i");
       emailIcon.setAttribute("class", "fa fa-envelope fa-sm");
-      emailIcon.setAttribute("style",'font-size:10px')
+      emailIcon.setAttribute("style", "font-size:10px");
       const emailId = document.createElement("span");
       emailId.setAttribute("class", "font-italic p-3");
-      emailId.setAttribute("style", 'font-size:12px')
+      emailId.setAttribute("style", "font-size:12px");
 
       if (details.email == "") {
         emailId.textContent = "No emailId";
@@ -179,14 +182,9 @@ function gettests(labId) {
 // window.onload = function(){
 //   if(status == 'false'){
 //     document.getElementById("loginsignup").style.display = 'none'
-    
-    
+
 //   }
 // }
-
-
-
-
 
 // window.onload = function changeLoginValue() {
 //   let status = window.localStorage.getItem("status");
@@ -210,16 +208,12 @@ function gettests(labId) {
 //               <a class="dropdown-item" href="bengaluru.html"  onclick="kadapaCity()">KADAPA</a>
 //               <a class="dropdown-item"  href="bengaluru.html" onclick="mysoreCity()">MYSORE</a>
 //               <a class="dropdown-item" href="bengaluru.html"  onclick="chennaiCity()">CHENNAI</a>
-              
 
-
-              
 //             </div>
 //         </li>
-          
+
 //         </ul>
-        
-      
+
 //         <div>
 
 //         <div class="dropdown">
@@ -227,164 +221,162 @@ function gettests(labId) {
 //             <div class="float-right">
 //               <h5 class="text-info">Hi, ${name}
 
-              
-
 //             <i class="fa fa-caret-down text-danger" aria-hidden="true" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></i>
 //       <div class="collapse" id="collapseExample">
 
-    //   <div class="bg-light">
-    //      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#profile-update"><h6 class="text-center my-1"><i class="fa fa-pencil mr-4" aria-hidden="true"></i>Edit Profile</h6></a>
-    //       <div class="dropdown-divider"></div>
+//   <div class="bg-light">
+//      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#profile-update"><h6 class="text-center my-1"><i class="fa fa-pencil mr-4" aria-hidden="true"></i>Edit Profile</h6></a>
+//       <div class="dropdown-divider"></div>
 
-    //      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#upload-report"><h6 class="text-center my-1"><i class="fa fa-upload mr-2" aria-hidden="true"></i>Upload Report</h6></a>
-    //      <div class="dropdown-divider"></div>
+//      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#upload-report"><h6 class="text-center my-1"><i class="fa fa-upload mr-2" aria-hidden="true"></i>Upload Report</h6></a>
+//      <div class="dropdown-divider"></div>
 
-    //       <div class="text-center"><button type="button" class="btn btn-primary text-center mb-2" onclick="logout()"><i class="fa fa-sign-out mr-2" aria-hidden="true"></i>Logout</button></div>
-    //   </div>
-    // </div>
+//       <div class="text-center"><button type="button" class="btn btn-primary text-center mb-2" onclick="logout()"><i class="fa fa-sign-out mr-2" aria-hidden="true"></i>Logout</button></div>
+//   </div>
+// </div>
 
-    //         <!-- Modal -->
-    //         <div class="modal fade" id="profile-update" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    //           <div class="modal-dialog" role="document">
-    //             <div class="modal-content">
-    //               <div class="modal-header">
-    //                 <h5 class="modal-title" id="exampleModalLabel">Edit Your Profile</h5>
-    //                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    //                   <span aria-hidden="true">&times;</span>
-    //                 </button>
-    //               </div>
+//         <!-- Modal -->
+//         <div class="modal fade" id="profile-update" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+//           <div class="modal-dialog" role="document">
+//             <div class="modal-content">
+//               <div class="modal-header">
+//                 <h5 class="modal-title" id="exampleModalLabel">Edit Your Profile</h5>
+//                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+//                   <span aria-hidden="true">&times;</span>
+//                 </button>
+//               </div>
 
-    //               <div class="modal-body">
+//               <div class="modal-body">
 
-    //               <div class="input-group mb-3">
-    //                   <div class="input-group-prepend">
-    //                       <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
-    //                   </div>
-    //                   <input type="text" id="user-name" class="form-control" aria-label="Sizing example input"
-    //                       aria-describedby="inputGroup-sizing-default">
-    //               </div>
+//               <div class="input-group mb-3">
+//                   <div class="input-group-prepend">
+//                       <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+//                   </div>
+//                   <input type="text" id="user-name" class="form-control" aria-label="Sizing example input"
+//                       aria-describedby="inputGroup-sizing-default">
+//               </div>
 
-    //               <div class="input-group mb-3">
-    //                     <div class="input-group-prepend">
-    //                         <span class="input-group-text" id="inputGroup-sizing-default">Phone No.</span>
-    //                     </div>
-    //                     <input type="number" id="user-phone" class="form-control" aria-label="Sizing example input"
-    //                         aria-describedby="inputGroup-sizing-default">
-    //                 </div>
+//               <div class="input-group mb-3">
+//                     <div class="input-group-prepend">
+//                         <span class="input-group-text" id="inputGroup-sizing-default">Phone No.</span>
+//                     </div>
+//                     <input type="number" id="user-phone" class="form-control" aria-label="Sizing example input"
+//                         aria-describedby="inputGroup-sizing-default">
+//                 </div>
 
-    //                 <div class="input-group mb-3">
-    //                 <div class="input-group-prepend">
-    //                     <span class="input-group-text" id="inputGroup-sizing-default">DOB</span>
-    //                 </div>
-    //                 <input type="date" id="user-dob" class="form-control" aria-label="Sizing example input"
-    //                     aria-describedby="inputGroup-sizing-default">
-    //             </div>
+//                 <div class="input-group mb-3">
+//                 <div class="input-group-prepend">
+//                     <span class="input-group-text" id="inputGroup-sizing-default">DOB</span>
+//                 </div>
+//                 <input type="date" id="user-dob" class="form-control" aria-label="Sizing example input"
+//                     aria-describedby="inputGroup-sizing-default">
+//             </div>
 
-    //             <div class="input-group mb-3">
-    //                     <div class="input-group-prepend">
-    //                         <span class="input-group-text" id="inputGroup-sizing-default">Address</span>
-    //                     </div>
-    //                     <input type="address" id="user-address" class="form-control" aria-label="Sizing example input"
-    //                         aria-describedby="inputGroup-sizing-default">
-    //                 </div>
+//             <div class="input-group mb-3">
+//                     <div class="input-group-prepend">
+//                         <span class="input-group-text" id="inputGroup-sizing-default">Address</span>
+//                     </div>
+//                     <input type="address" id="user-address" class="form-control" aria-label="Sizing example input"
+//                         aria-describedby="inputGroup-sizing-default">
+//                 </div>
 
-    //                 <div class="input-group mb-3">
-    //                 <div class="input-group-prepend">
-    //                     <span class="input-group-text" id="inputGroup-sizing-default">Create For</span>
-    //                 </div>
-    //                 <input type="text" id="create-for" class="form-control" placeholder="Father/Mother/Self.."
-    //                     aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-    //             </div>
+//                 <div class="input-group mb-3">
+//                 <div class="input-group-prepend">
+//                     <span class="input-group-text" id="inputGroup-sizing-default">Create For</span>
+//                 </div>
+//                 <input type="text" id="create-for" class="form-control" placeholder="Father/Mother/Self.."
+//                     aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+//             </div>
 
-    //             <div class="input-group mb-3">
-    //             <div class="input-group-prepend">
-    //                 <span class="input-group-text" id="inputGroup-sizing-default">City</span>
-    //             </div>
-    //             <input type="text" id="user-city" class="form-control" aria-label="Sizing example input"
-    //                 aria-describedby="inputGroup-sizing-default">
-    //         </div>
+//             <div class="input-group mb-3">
+//             <div class="input-group-prepend">
+//                 <span class="input-group-text" id="inputGroup-sizing-default">City</span>
+//             </div>
+//             <input type="text" id="user-city" class="form-control" aria-label="Sizing example input"
+//                 aria-describedby="inputGroup-sizing-default">
+//         </div>
 
-    //         <div class="input-group mb-3">
-    //                     <div class="input-group-prepend">
-    //                         <span class="input-group-text" id="inputGroup-sizing-default">State</span>
-    //                     </div>
-    //                     <input type="text" id="user-state" class="form-control" aria-label="Sizing example input"
-    //                         aria-describedby="inputGroup-sizing-default">
-    //                 </div>
-    //                 <div class="input-group mb-3">
-    //                     <div class="input-group-prepend">
-    //                         <span class="input-group-text" id="inputGroup-sizing-default">Pin</span>
-    //                     </div>
-    //                     <input type="number" id="user-pin" class="form-control" aria-label="Sizing example input"
-    //                         aria-describedby="inputGroup-sizing-default">
-    //                 </div>
-    //                 <div class="input-group mb-3">
-    //                     <div class="input-group-prepend">
-    //                         <span class="input-group-text" id="inputGroup-sizing-default">Gender</span>
-    //                         <select name="gender" id="gender" class="fa-sm text-muted ">
-    //                             <option value="">Select a Gender</option>
-    //                             <option value="male">Male</option>
-    //                             <option value="Female">Female</option>
-    //                             <option value="others">Others</option>
-    //                         </select>
-    //                     </div>
-    //                 </div>
+//         <div class="input-group mb-3">
+//                     <div class="input-group-prepend">
+//                         <span class="input-group-text" id="inputGroup-sizing-default">State</span>
+//                     </div>
+//                     <input type="text" id="user-state" class="form-control" aria-label="Sizing example input"
+//                         aria-describedby="inputGroup-sizing-default">
+//                 </div>
+//                 <div class="input-group mb-3">
+//                     <div class="input-group-prepend">
+//                         <span class="input-group-text" id="inputGroup-sizing-default">Pin</span>
+//                     </div>
+//                     <input type="number" id="user-pin" class="form-control" aria-label="Sizing example input"
+//                         aria-describedby="inputGroup-sizing-default">
+//                 </div>
+//                 <div class="input-group mb-3">
+//                     <div class="input-group-prepend">
+//                         <span class="input-group-text" id="inputGroup-sizing-default">Gender</span>
+//                         <select name="gender" id="gender" class="fa-sm text-muted ">
+//                             <option value="">Select a Gender</option>
+//                             <option value="male">Male</option>
+//                             <option value="Female">Female</option>
+//                             <option value="others">Others</option>
+//                         </select>
+//                     </div>
+//                 </div>
 
-    //             </div>
+//             </div>
 
-    //             <div class="modal-footer">
+//             <div class="modal-footer">
 
-    //               <button type="button" class="btn btn-primary" data-modal="dismiss" onclick="patchingProfileDetailsToDb()">Submit</button>
-    //             </div>
-    //           </div>
-    //         </div>
-    //       </div>
-    //        <!--modal for uploading report-->
+//               <button type="button" class="btn btn-primary" data-modal="dismiss" onclick="patchingProfileDetailsToDb()">Submit</button>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//        <!--modal for uploading report-->
 
-    //        <div class="modal fade" id="upload-report" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    //   <div class="modal-dialog" role="document">
-    //     <div class="modal-content">
-    //       <div class="modal-header">
-    //         <h5 class="modal-title" id="exampleModalLabel">Upload the previous reports </h5>
-    //         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    //           <span aria-hidden="true">&times;</span>
-    //         </button>
-    //       </div>
-    //       <div class="modal-body">
-    //       <div class="input-group mb-3">
-    //       <div class="input-group-prepend">
-    //         <span class="input-group-text" id="inputGroupFileAddon01"><i class="fa fa-files-o" aria-hidden="true"></i></span>
-    //       </div>
-    //       <div class="custom-file">
-    //         <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-    //         <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+//        <div class="modal fade" id="upload-report" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+//   <div class="modal-dialog" role="document">
+//     <div class="modal-content">
+//       <div class="modal-header">
+//         <h5 class="modal-title" id="exampleModalLabel">Upload the previous reports </h5>
+//         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+//           <span aria-hidden="true">&times;</span>
+//         </button>
+//       </div>
+//       <div class="modal-body">
+//       <div class="input-group mb-3">
+//       <div class="input-group-prepend">
+//         <span class="input-group-text" id="inputGroupFileAddon01"><i class="fa fa-files-o" aria-hidden="true"></i></span>
+//       </div>
+//       <div class="custom-file">
+//         <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+//         <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
 
-    //       </div>
+//       </div>
 
-    //     </div>
-    //     <div class="dropdown-divider my-3"></div>
+//     </div>
+//     <div class="dropdown-divider my-3"></div>
 
-    // <div class="input-group mb-3">
-    // <div class="input-group-prepend">
-    //   <span class="input-group-text" id="inputGroup-sizing-default">Test Name</span>
-    // </div>
-    // <input type="text" id="testName" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-    // </div>
+// <div class="input-group mb-3">
+// <div class="input-group-prepend">
+//   <span class="input-group-text" id="inputGroup-sizing-default">Test Name</span>
+// </div>
+// <input type="text" id="testName" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+// </div>
 
-    // <div class="input-group mb-3">
-    //   <div class="input-group-prepend">
-    //     <span class="input-group-text" id="inputGroup-sizing-default">Doctor</span>
-    //   </div>
-    //   <input type="text" id="doctorName" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Doctor consulted">
-    // </div>
-    //       </div>
-    //       <div class="modal-footer">
-    //         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-    //         <button type="button" class="btn btn-primary" onclick="uploadUsersPreviousReportFile()">Upload</button>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
+// <div class="input-group mb-3">
+//   <div class="input-group-prepend">
+//     <span class="input-group-text" id="inputGroup-sizing-default">Doctor</span>
+//   </div>
+//   <input type="text" id="doctorName" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Doctor consulted">
+// </div>
+//       </div>
+//       <div class="modal-footer">
+//         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+//         <button type="button" class="btn btn-primary" onclick="uploadUsersPreviousReportFile()">Upload</button>
+//       </div>
+//     </div>
+//   </div>
+// </div>
 
 //       </nav>
 //     </header>
@@ -406,10 +398,7 @@ function gettests(labId) {
 //                 <a class="dropdown-item" href="bengaluru.html"  onclick="kadapaCity()">KADAPA</a>
 //                 <a class="dropdown-item"  href="bengaluru.html" onclick="mysoreCity()">MYSORE</a>
 //                 <a class="dropdown-item" href="bengaluru.html"  onclick="chennaiCity()">CHENNAI</a>
-                
 
-
-                
 //               </div>
 //           </li>
 //         </ul>
@@ -433,7 +422,7 @@ function gettests(labId) {
 //                     href=""
 //                     class="nav-link text-decoration-none"
 //                     data-toggle="modal"
-//                     data-target="#register" 
+//                     data-target="#register"
 //                   >
 //                     <button
 //                       type="button"

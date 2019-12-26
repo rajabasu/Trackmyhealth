@@ -7,11 +7,14 @@ header {
   background-color: #7fe5f0;
 }
 
+.head-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
 header .header-brand {
-  /* font-size: 25px;
-  font-weight: 20px;
-  color: #f83839;
-  font-family: "Libre Baskerville", serif; */
   font-family: "Abril Fatface", cursive;
   font-size: 25px;
   font-weight: 500;
@@ -20,7 +23,6 @@ header .header-brand {
   text-align: center;
   padding: 20px 20px;
   text-decoration: none;
-  /* border-right: 2px solid black; */
 }
 
 .header-cases {
@@ -34,11 +36,125 @@ header .header-brand {
 }
 /* end of header */
 
+/* index banner */
+.index-banner {
+  width: 100%;
+  /* height: calc(100vh-100px); */
+  height: 300px;
+  background-image: url(landingpage.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: table;
+}
+
+.vertical-center {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.index-banner h2 {
+  font-family: Catamaran;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 70px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 8px #111;
+}
+
+.testimonial {
+  background: lightgreen;
+  text-align: center;
+  padding: 30px;
+}
+/* end of index banner */
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  /* background: #f1f1f1f1; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {
+  font-style: italic;
+}
+
+/* Add a blue color to the author */
+.author {
+  color: cornflowerblue;
+}
+
 /* footer */
 footer {
   width: calc(100%-80rem);
   padding: 40px 40px;
-  /* margin-top: 20px; */
   background-color: #7fe5f0;
   overflow: hidden;
 }
@@ -50,20 +166,64 @@ footer ul li {
 /* end of footer */
 
 /* media responsive */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .nav-bar {
     height: 7rem;
   }
 
   header .header-brand {
     border-right: 2px solid black;
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .wrapper {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  .index-banner {
+    height: 450px;
+  }
+  /* 
+  .index-banner h1 {
+    display: block;
+    width: 600px;
+    margin: 0 auto;
+  } */
+
+  .index-links {
+    overflow: hidden;
+  }
+
+  .index-links div {
+    margin: 20px 10px 0;
+    height: auto;
+    background-color: lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    /* float: left; */
+  }
+
+  /* .index-square {
+     width: 90% !important; 
+  }
+
+  .index-rectangle {
+    width: 90% !important;
+    
+  } */
+
+  .index-links div h3 {
+    line-height: 180px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .foot-fix {
     padding: 40px 40px;
-    /* margin-top: 20px; */
     background-color: #7fe5f0;
     overflow: hidden;
     left: 0;

@@ -55,22 +55,22 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a
-                class="nav-link anchor-links text-decoration-none header-cases"
-                href="showLab.html"
+                class="nav-link anchor-links text-decoration-none header-cases text-dark"
+                href="#"
                 >VIEW LABS <span class="sr-only">(current)</span></a
               >
             </li>
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a
-                class="nav-link anchor-links text-decoration-none header-cases"
-                href="about.html"
+                class="nav-link anchor-links text-decoration-none header-cases text-dark"
+                href="#"
                 >ABOUT US</a
               >
             </li>
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a
                 class="nav-link anchor-links text-decoration-none header-cases"
-                href="contact.html"
+                href="#"
                 >CONTACT</a
               >
             </li>
@@ -246,6 +246,16 @@
       crossorigin="anonymous"
     ></script>
     <!-- end of bootstrap script -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(document).on("click", "ul li", function() {
+        $(this)
+          .addClass("active")
+          .siblings()
+          .removeClass("active");
+      });
+    </script>
 
     <script src="userLogin.js"></script>
   </body>
